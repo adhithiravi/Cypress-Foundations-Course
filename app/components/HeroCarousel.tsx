@@ -41,14 +41,14 @@ export default function HeroCarousel() {
   }, []);
 
   return (
-    <div className="relative h-[600px]">
+    <div className="relative h-[600px]" data-testid="hero-carousel">
       <div className="absolute inset-0 w-full h-full">
         {heroSlides.map((slide, index) => (
           <div
             key={index}
-            className={`absolute inset-0 transition-opacity duration-1000 ${
-              index === currentIndex ? "opacity-100" : "opacity-0"
-            }`}
+            data-testid="carousel-slide"
+            className={`absolute inset-0 transition-opacity duration-1000 ${index === currentIndex ? "opacity-100" : "opacity-0"
+              }`}
           >
             <div className="hero-overlay" />
             <Image
@@ -77,9 +77,8 @@ export default function HeroCarousel() {
         {heroSlides.map((_, index) => (
           <button
             key={index}
-            className={`w-3 h-3 rounded-full transition-colors ${
-              index === currentIndex ? "bg-white" : "bg-gray-400"
-            }`}
+            className={`w-3 h-3 rounded-full transition-colors ${index === currentIndex ? "bg-white" : "bg-gray-400"
+              }`}
             onClick={() => setCurrentIndex(index)}
           />
         ))}
