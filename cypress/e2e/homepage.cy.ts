@@ -32,4 +32,8 @@ describe("Bethany's Pie Shop Homepage", () => {
     cy.get("[data-testid=cart-count]").should("have.length", 1);
   });
 
+  it("Clicking on Show Now on carousal will navigate to /shop page", () => {
+    cy.get("[data-testid=carousal-shop-button").first().click();
+    cy.url().should("include", "/shop");
+  });
 });
