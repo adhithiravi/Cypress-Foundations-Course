@@ -1,6 +1,11 @@
 describe('Fruit Pies Shop Page', () => {
   beforeEach(() => {
+    cy.intercept('GET', '/api/pies?category=fruit').as('getFruitPies');
     cy.visit('/shop/fruit');
+    cy.wait('@getFruitPies').then((interception) => {
+      expect(interception.response.statusCode).to.equal(200);
+      expect(interception.response.body).to.have.length.greaterThan(0);
+    });
   });
 
   it("renders the fruit pies section", () => {
