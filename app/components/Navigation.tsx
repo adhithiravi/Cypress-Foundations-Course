@@ -29,12 +29,12 @@ export default function Navigation() {
             </Link>
           </div>
           <div className="hidden sm:flex sm:items-center sm:space-x-8">
-            <Link href="/" className="nav-link">
+            <Link href="/" className="nav-link" >
               Home
             </Link>
             <div className="relative group">
-              <button className="nav-link">Shop</button>
-              <div className="absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+              <button className="nav-link" data-testid="shop-button">Shop</button>
+              <div className="absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                 <div className="py-1">
                   <Link href="/shop" className="dropdown-item">
                     All Pies
