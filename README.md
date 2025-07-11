@@ -1,8 +1,4 @@
-# Cypress Foundations Course
 
-Here is your **clean copy-paste markdown** ready:
-
----
 
 # Cypress Foundations Course
 
